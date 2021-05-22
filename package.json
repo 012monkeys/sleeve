@@ -1,0 +1,24 @@
+{
+  "name": "sleeve-me",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "_lin-ui@0.9.4@lin-ui": "^0.9.4",
+    "lin-ui": "^0.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourSmile2233/sleeve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yourSmile2233/sleeve/issues"
+  },
+  "homepage": "https://github.com/yourSmile2233/sleeve#readme"
+}

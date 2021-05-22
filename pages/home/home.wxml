@@ -1,0 +1,13 @@
+<view>
+  <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
+  <swiper indicator-dots class="swiper-img" indicator-active-color="#157658"  circular>
+    <block wx:for="{{bannerB.items}}" wx:key="id">
+      <swiper-item>
+        <image class="swiper-img" src="{{item.img}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <s-categrid grid="{{grid}}"></s-categrid>
+  <image class="activity" src="{{activityD.entrance_img}}"></image>
+  <s-spu-scroll wx:if="{{themeE.online}}" theme="{{themeE}}" spu-List="{{themeESpu}}"></s-spu-scroll>
+</view>
