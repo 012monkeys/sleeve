@@ -3,3 +3,5 @@ components/images
 config
 *.xlsx
 *.xmind
+miniprogram_npm
+node_modules
