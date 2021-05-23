@@ -1,6 +1,6 @@
 <view>
   <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
-  <swiper indicator-dots class="swiper-img" indicator-active-color="#157658"  circular>
+  <swiper indicator-dots class="swiper-img" indicator-active-color="#157658"  circular >
     <block wx:for="{{bannerB.items}}" wx:key="id">
       <swiper-item>
         <image class="swiper-img" src="{{item.img}}"></image>
@@ -9,5 +9,13 @@
   </swiper>
   <s-categrid grid="{{grid}}"></s-categrid>
   <image class="activity" src="{{activityD.entrance_img}}"></image>
-  <s-spu-scroll wx:if="{{themeE.online}}" theme="{{themeE}}" spu-List="{{themeESpu}}"></s-spu-scroll>
+  <!-- 自定义组件内部样式类 l-class="spu-scroll"  -->
+  <s-spu-scroll l-class="spu-scroll" wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpu}}" ></s-spu-scroll>  
+  <image src="{{themeF.entrance_img}}" class="quality"></image>
+  <s-hot-list banner="{{bannerG}}"></s-hot-list>
+  <image src="{{themeH.entrance_img}}" class="fashion"></image>
+  <view class="spu-bottom">
+    <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+    <l-water-flow generic:l-water-flow-item=""></l-water-flow>
+  </view>
 </view>

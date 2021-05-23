@@ -3,10 +3,10 @@ Component({
   /**
    * 组件的属性列表
    */
+  // 自定义组件内部样式类
+  externalClasses: ['l-class'],
   properties: {
-    theme: {
-      type: Object
-    },
+    theme: Object,
     spuList: Array
   },
 

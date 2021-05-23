@@ -1,2 +1,16 @@
-<!--components/spu-scroll/index.wxml-->
-<text>components/spu-scroll/index.wxml</text>
+<wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<view class="container l-class">
+  <image class="title" src="{{theme.title_img}}"></image>
+  <scroll-view scroll-x class="scroll-view">
+    <view class="inner">
+      <block wx:for="{{spuList}}" wx:key="id">
+        <view class="spu-container">
+          <image src="{{item.img}}" class="spu-img"></image>
+          <text class="spu-text">{{item.title.length >= 8? s.substring(item.title, 0 ,7) + '...' : item.title}}</text>
+          <l-price l-value-class="price-value" l-unit-class="price-unit" value="{{item.price}}" color="#157658" l-class="price-view" bold="800">
+          </l-price>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
