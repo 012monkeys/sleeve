@@ -1,4 +1,5 @@
 <wxs src="../../miniprogram_npm/lin-ui/filter/string.wxs" module="s"></wxs>
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
 <view class="container l-class">
   <image class="title" src="{{theme.title_img}}"></image>
   <scroll-view scroll-x class="scroll-view">
@@ -7,7 +8,7 @@
         <view class="spu-container">
           <image src="{{item.img}}" class="spu-img"></image>
           <text class="spu-text">{{item.title.length >= 8? s.substring(item.title, 0 ,7) + '...' : item.title}}</text>
-          <l-price l-value-class="price-value" l-unit-class="price-unit" value="{{item.price}}" color="#157658" l-class="price-view" bold="800">
+          <l-price l-value-class="price-value" l-unit-class="price-unit" value="{{p.mainPrice(item.price, item.discount_price).price}}" color="#157658" l-class="price-view" bold="800">
           </l-price>
         </view>
       </block>

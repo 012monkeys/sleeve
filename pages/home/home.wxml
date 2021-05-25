@@ -1,4 +1,5 @@
-<view>
+<l-loadmore type="{{loadingType}}" show="true">
+<view slot="content">
   <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
   <swiper indicator-dots class="swiper-img" indicator-active-color="#157658"  circular >
     <block wx:for="{{bannerB.items}}" wx:key="id">
@@ -16,6 +17,7 @@
   <image src="{{themeH.entrance_img}}" class="fashion"></image>
   <view class="spu-bottom">
     <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
-    <l-water-flow generic:l-water-flow-item=""></l-water-flow>
+    <l-water-flow generic:l-water-flow-item="s-spu-proview"></l-water-flow>
   </view>
 </view>
+</l-loadmore>

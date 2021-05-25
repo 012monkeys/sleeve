@@ -1,16 +1,20 @@
 // pages/home/home.js
 import {
   Theme
-} from '../../model/theme'
+} from '../../models/theme'
 import {
   Banner
-} from '../../model/banner'
+} from '../../models/banner'
 import {
   Category
-} from '../../model/category'
+} from '../../models/category'
 import {
   Activity
-} from '../../model/activity'
+} from '../../models/activity'
+
+import {
+  SpuPaging
+} from '../../models/spu-paging'
 
 Page({
 
@@ -21,21 +25,29 @@ Page({
     themeA: null,
     themeE: null,
     bannerB: null,
-    grid: [],
     ActivityD: null,
     themeESpu: null,
-    bannerG: null
+    bannerG: null, 
+    grid: [],
+    loadingType: 'loading' // 是否显示load动画
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: async function (options) {
     this.initAllData()
+    this.initBottomSpuList()
   },
 
-  async initBottomSpuList() {
-    
+  async initBottomSpuList() { // 获得商品列表
+    const paging = SpuPaging.getLatestPaging()
+    this.data.paging = paging
+    const data = await paging.getMoreData() // 
+    if(!data) {
+      return
+    }
+    wx.lin.renderWaterFlow(data.items)
   },
   async initAllData() {
     const theme = new Theme()
@@ -75,8 +87,18 @@ Page({
 
   },
 
-  onReachBottom: function () {
-
+  async onReachBottom() {
+    const data = await this.data.paging.getMoreData()
+    if(!data) {
+      return
+    }
+    wx.lin.renderWaterFlow(data.items)
+    if(!data.moreData) {
+      this.setData({
+        loadingType: 'end'
+      })
+    }
+    
   },
 
   onShareAppMessage: function () {
