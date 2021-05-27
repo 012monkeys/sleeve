@@ -1,0 +1,42 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "query": "pid=2",
+          "scene": null
+        },
+        {
+          "name": "无规格",
+          "pathName": "pages/detail/detail",
+          "query": "pid=3",
+          "scene": null
+        },
+        {
+          "name": "cart",
+          "pathName": "pages/cart/cart",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "category",
+          "pathName": "pages/category/category",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

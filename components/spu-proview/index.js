@@ -42,6 +42,12 @@ Component({
         h: (width * scale)
       })
 
+    },
+    onItemTap(event) { // 点击商品,跳转到商品详情页
+      const pid = event.currentTarget.dataset.pid
+      wx.navigateTo({
+        url: `/pages/detail/detail?pid=${pid}`,
+      })
     }
   }
 })

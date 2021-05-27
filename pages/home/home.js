@@ -43,12 +43,13 @@ Page({
   async initBottomSpuList() { // 获得商品列表
     const paging = SpuPaging.getLatestPaging()
     this.data.paging = paging
-    const data = await paging.getMoreData() // 
+    const data = await paging.getMoreData() 
     if(!data) {
       return
     }
     wx.lin.renderWaterFlow(data.items)
   },
+  
   async initAllData() {
     const theme = new Theme()
     await theme.getThemes()
@@ -57,10 +58,10 @@ Page({
     const themeA = theme.getHomeLocationA()
     const themeE = theme.getHomeLocationE()
     let themeESpu = []
-    if (themeE.online) {
+    if (themeE.online) { // 主题是否在线
       const data = await Theme.getHomeLocationESpu()
       if (data) {
-        themeESpu = data.spu_list.slice(0, 8)
+        themeESpu = data.spu_list.slice(0, 8) // 最多展示的数量
       }
     }
     const themeF = theme.getHomeLocationF()
@@ -87,7 +88,7 @@ Page({
 
   },
 
-  async onReachBottom() {
+  async onReachBottom() { // 到达底部的时候
     const data = await this.data.paging.getMoreData()
     if(!data) {
       return
