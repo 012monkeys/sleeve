@@ -7,7 +7,8 @@
   </view>
 
   <view class="main">
-    <l-segment bind:linchange="onSegChange" active-key="{{defaultRootId}}" even="{{false}}" placement="left" item-height="90" max-height="{{segHeight}}" l-active-class="segment-item-active" l-inactive-class="segment-item" l-line-class="l-seg-line" scrollable>
+    <!-- 右边侧栏 -->
+    <l-segment bind:linchange="onSegChange" active-key="{{defaultRootId}}" even="{{false}}" placement="left" item-height="90" height="{{segHeight}}" l-active-class="segment-item-active" l-inactive-class="segment-item" l-line-class="l-seg-line" scrollable>
     <block wx:for="{{roots}}" wx:key="id"> 
         <l-segment-item tab="{{item.name}}" key="{{item.id}}" />
     </block>

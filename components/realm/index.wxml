@@ -1,5 +1,5 @@
 <wxs src="../../wxs/price.wxs" module="p"></wxs>
-
+<!-- 购买页的商品sku信息 -->
 <scroll-view class="container" scroll-y>
     <view class="inner-container">
         <view class="sku-preview">

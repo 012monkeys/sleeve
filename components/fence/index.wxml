@@ -1,3 +1,4 @@
+<!-- sku规格设置 -->
 <view class="container">
     <view class="title">{{fence.title}}</view>
     <view class="row-container">

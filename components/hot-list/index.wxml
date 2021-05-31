@@ -1,9 +1,9 @@
+<!-- 首页热卖榜单 -->
 <view class="container">
   <image class="title" src="{{banner.img}}"></image>
   <view class="inner-container">
     <image class="left" src="{{left.img}}"></image>
     <view class="right-container">
-
       <image class="right-size" src="{{rightTop.img}}"></image>
       <image class="right-size" src="{{rightBottom.img}}"></image>
     </view>

@@ -1,5 +1,5 @@
 <wxs src="../../wxs/price.wxs" module="p"></wxs>
-
+<!-- 首页为你推荐板块 -->
 <view class="container" bind:tap="onItemTap" data-pid="{{data.id}}">
   <image class="img" src="{{data.img}}" mode="widthFix" />
   <view class="content-container">

@@ -1,23 +1,33 @@
 <l-loadmore type="{{loadingType}}" show="true">
-<view slot="content">
-  <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
-  <swiper indicator-dots class="swiper-img" indicator-active-color="#157658"  circular >
-    <block wx:for="{{bannerB.items}}" wx:key="id">
-      <swiper-item>
-        <image class="swiper-img" src="{{item.img}}"></image>
-      </swiper-item>
-    </block>
-  </swiper>
-  <s-categrid grid="{{grid}}"></s-categrid>
-  <image class="activity" src="{{activityD.entrance_img}}"></image>
-  <!-- 自定义组件内部样式类 l-class="spu-scroll"  -->
-  <s-spu-scroll l-class="spu-scroll" wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpu}}" ></s-spu-scroll>  
-  <image src="{{themeF.entrance_img}}" class="quality"></image>
-  <s-hot-list banner="{{bannerG}}"></s-hot-list>
-  <image src="{{themeH.entrance_img}}" class="fashion"></image>
-  <view class="spu-bottom">
-    <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
-    <l-water-flow generic:l-water-flow-item="s-spu-proview"></l-water-flow>
+  <view slot="content">
+    <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
+
+    <!-- 首页banner -->
+    <swiper indicator-dots class="swiper-img" indicator-active-color="#157658" circular>
+      <block wx:for="{{bannerB.items}}" wx:key="id">
+        <swiper-item>
+          <image class="swiper-img" src="{{item.img}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 六宫格 -->
+    <s-categrid grid="{{grid}}"></s-categrid>
+
+    <image class="activity" src="{{activityD.entrance_img}}"></image>
+
+    <s-spu-scroll l-class="spu-scroll" wx:if="{{themeE.online}}" theme="{{themeE}}" spu-list="{{themeESpu}}">
+    </s-spu-scroll>
+
+    <image src="{{themeF.entrance_img}}" class="quality"></image>
+
+    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <image src="{{themeH.entrance_img}}" class="fashion"></image>
+
+    <view class="spu-bottom">
+      <image class="title-spu-bottom" src="/imgs/home/title@interest.png"></image>
+      <l-water-flow generic:l-water-flow-item="s-spu-proview"></l-water-flow>
+    </view>
   </view>
-</view>
 </l-loadmore>
